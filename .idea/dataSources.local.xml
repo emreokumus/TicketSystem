@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="@localhost" uuid="92a97175-7998-4408-930d-dc44704c9e3b">
+      <database-info product="Cassandra" version="3.11.9" jdbc-version="4.2" driver-name="Cassandra JDBC Driver" driver-version="1.3.5" dbms="CASSANDRA" exact-version="3.11.9" exact-driver-version="1.3">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>cassandra</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="ticketsystem" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

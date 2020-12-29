@@ -1,0 +1,23 @@
+#hepsini buraya topladık
+
+version: '3.1' #docker-compose versiyonu
+services:
+  cassandra: #account service kullanır
+    image: cassandra
+    ports:
+      - '9042:9042'
+
+  mysql:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ticketsystem #mysql default şifresi
+
+  elasticsearch:
+    image: elasticsearch:7.10.1
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"

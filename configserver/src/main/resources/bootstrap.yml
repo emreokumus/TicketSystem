@@ -1,0 +1,19 @@
+server:
+  port: 8888
+
+#Eureka Server üzerinde ServiceRegistery'e register olacağı isim.
+spring:
+  application:
+    name: config-server
+# profiles:
+  # active: native # “native” profile in the Config Server that does not use Git but loads the config files from the local classpath or file system
+  cloud: # configuration .yml file'ları depoladığı ve ulaşacağı yer.
+    config:
+      server:
+        git:
+          uri: https://github.com/emreokumus/TicketSystemConfigRepo.git
+          username: ${CONFIG_GIT_USERNAME}
+          password: ${CONFIG_GIT_PASSWORD}
+          clone-on-start: true
+      # native:
+        # search-locations: classpath:/microservice #classpath'de resource altından bir klasör altından çekmek istersek bunu kullanırız.

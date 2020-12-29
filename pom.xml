@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <!--Spring Boot ve Spring Cloud ile çalışıyorsak <parent>'in "org.springframework.boot" parent olmalıdır.-->
+    <parent>
+        <!--Kendi başına çalışabilir bir uygulama ve spring boot'un özelliklerinin kazandırılması için kullanılır.-->
+        <!--Spring'in dependency'lerini buna bağlı olarak çekilir.Örneğin versiyon olmayanlar bunun versiyonuna göre gelir.-->
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.0.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.ticketsystem</groupId>
+    <artifactId>ticketsystem</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <java.version>8</java.version>
+        <!--Cloud versiyonların yazdığı site https://spring.io/projects/spring-cloud
+        ve
+        https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-dependencies -->
+        <!--Spring Cloud dependecylerini yöneteceğimiz versiyon-->
+        <spring.cloud.version>Hoxton.RELEASE</spring.cloud.version>
+    </properties>
+    <modules>
+        <module>accountservice</module>
+        <module>configserver</module>
+        <module>eurekaserver</module>
+        <module>ticketservice</module>
+    </modules>
+    <!--Ortak dependecyleri buraya koyduk.-->
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <!--ConfigClient-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.modelmapper</groupId>
+            <artifactId>modelmapper</artifactId>
+            <version>2.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+    <dependencyManagement><!--Spring Cloud uygulamasının hangi dependecyler ile ve hangi versiyonunu ile çalışacağını belirler.-->
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring.cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
