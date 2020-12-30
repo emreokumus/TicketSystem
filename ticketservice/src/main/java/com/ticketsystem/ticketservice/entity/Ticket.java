@@ -47,6 +47,7 @@ public class Ticket extends BaseEntityModel{ //extends edince abstractaki kolonl
     @Getter
     @Setter
     @Enumerated(EnumType.ORDINAL) //default ORDINAL
+    @Column(name="ticket_status")
     //Bunu bir enumeration olarak vericem.
     private TicketStatus ticketStatus;
 }

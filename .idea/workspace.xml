@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="" />
+    <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/92a97175-7998-4408-930d-dc44704c9e3b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/92a97175-7998-4408-930d-dc44704c9e3b.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/dto/AccountDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/dto/AccountDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/dto/AccountDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/dto/AccountDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/config/CustomBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/config/CustomBeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/entity/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/entity/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/repository/TicketRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/repository/TicketRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/service/TicketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/service/TicketServiceImpl.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,17 +38,38 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="cassandra" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="cassandra" type="feb32156:DbDataSourceImpl" />
         <item name="keyspaces" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="cassandra" type="feb32156:DbDataSourceImpl" />
+        <item name="keyspaces" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ticketsystem: schema" type="16f33254:CassImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="cassandra" type="feb32156:DbDataSourceImpl" />
         <item name="roles" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mysql" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mysql" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="mysql" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ticketsystem: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -40,18 +77,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1m9zUxOSTiM6umjDvaz5wFt2xJX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="cassandra" />
+    <property name="DatabaseDriversLRU" value="cassandra&#10;mysql" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -77,7 +119,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AccountServiceApplication">
+  <component name="RunManager" selected="Spring Boot.TicketServiceApplication">
     <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
@@ -185,6 +227,15 @@
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@fda87a34" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5d952db9" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@daee1add" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@daee1add" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@1719a68e" type="9fbbdea:ServiceModel$ServiceNode" />
+            </path>
           </expand>
           <select />
         </treeState>
@@ -205,12 +256,23 @@
       <workItem from="1608990067845" duration="110000" />
       <workItem from="1608991010750" duration="38000" />
       <workItem from="1608991077543" duration="58000" />
-      <workItem from="1608991225089" duration="42941000" />
+      <workItem from="1608991225089" duration="49067000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

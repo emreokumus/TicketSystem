@@ -12,6 +12,8 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: ticketsystem #mysql default şifresi
+    ports:
+      - '3307:3306'
 
   elasticsearch:
     image: elasticsearch:7.10.1
