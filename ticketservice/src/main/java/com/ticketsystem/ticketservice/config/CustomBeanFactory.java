@@ -11,7 +11,7 @@ import org.modelmapper.ModelMapper;
 //Bu ikisini ticket-service.yml üzerinde de enable edebilirdik.
 @EnableElasticsearchRepositories
 @EnableJpaRepositories("com.ticketsystem") //TicketService'i TicketRepository'i path'ini bilmediği için implemente edemedi path ekledik.
-@ComponentScan("com.ticketsystem")
+@ComponentScan("com.ticketsystem") //bu paketi tarar ve bu paketlerdeki tüm bileşenleri load eder
 public class CustomBeanFactory {
     @Bean
     public ModelMapper getModelMapper(){

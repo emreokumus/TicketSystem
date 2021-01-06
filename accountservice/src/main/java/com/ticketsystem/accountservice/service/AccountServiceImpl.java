@@ -1,8 +1,8 @@
 package com.ticketsystem.accountservice.service;
 
-import com.ticketsystem.accountservice.dto.AccountDto;
 import com.ticketsystem.accountservice.entity.Account;
 import com.ticketsystem.accountservice.repository.AccountRepository;
+import com.ticketsystem.servicecommunication.client.contract.AccountDto;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;

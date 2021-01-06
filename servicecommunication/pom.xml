@@ -6,31 +6,22 @@
         <artifactId>ticketsystem</artifactId>
         <groupId>com.ticketsystem</groupId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath/> <!--Kendi parent'inin pom'u ile çalışacak demek-->
+        <relativePath/>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <version>1.0-SNAPSHOT</version>
-    <description>Eureka Server</description>
-    <artifactId>eurekaserver</artifactId>
+    <version>10.0.1</version> <!--package(library) version-->
+    <artifactId>servicecommunication</artifactId>
+    <packaging>jar</packaging>
 
-    <!--EurekaServer-->
+    <description>Common Library</description>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-feign</artifactId>
+            <version>1.4.6.RELEASE</version>
         </dependency>
-
-        <!--Diğer dependency'ler root pom.xml içerisinden gelir.-->
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

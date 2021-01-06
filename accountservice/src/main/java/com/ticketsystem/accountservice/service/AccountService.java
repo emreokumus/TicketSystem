@@ -1,6 +1,6 @@
 package com.ticketsystem.accountservice.service;
 
-import com.ticketsystem.accountservice.dto.AccountDto;
+import com.ticketsystem.servicecommunication.client.contract.AccountDto;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 

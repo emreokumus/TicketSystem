@@ -1,14 +1,12 @@
 package com.ticketsystem.accountservice.controller;
 
-import com.ticketsystem.accountservice.dto.AccountDto;
 import com.ticketsystem.accountservice.service.AccountService;
+import com.ticketsystem.servicecommunication.client.contract.AccountDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "account")

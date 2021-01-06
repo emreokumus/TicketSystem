@@ -10,7 +10,6 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ticketsystem</groupId>
     <version>1.0-SNAPSHOT</version>
     <artifactId>accountservice</artifactId>
     <description>Account Service</description>
@@ -30,6 +29,13 @@
             <groupId>com.codahale.metrics</groupId>
             <artifactId>metrics-core</artifactId>
             <version>3.0.2</version>
+        </dependency>
+        <!--ortak library (feign clients,all dto's vb.)-->
+        <dependency>
+            <groupId>com.ticketsystem</groupId>
+            <artifactId>servicecommunication</artifactId>
+            <!--<version>${project.version}</version>-->
+            <version>10.0.1</version>
         </dependency>
     </dependencies>
 

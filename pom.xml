@@ -29,6 +29,7 @@
         <module>configserver</module>
         <module>eurekaserver</module>
         <module>ticketservice</module>
+        <module>servicecommunication</module>
     </modules>
     <!--Ortak dependecyleri buraya koyduk.-->
     <dependencies>

@@ -3,14 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>ticketsystem</artifactId>
         <groupId>com.ticketsystem</groupId>
+        <artifactId>ticketsystem</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!--Kendi parent'inin pom'u ile çalışacak demek-->
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ticketsystem</groupId>
     <version>1.0-SNAPSHOT</version>
     <artifactId>ticketservice</artifactId>
     <description>Ticket Service</description>
@@ -37,6 +36,13 @@
             <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
         </dependency>
 
+        <!--feign kullanarak account service ile iletişim kurabilmesi için ve ek ortak özellikler-->
+        <dependency>
+            <groupId>com.ticketsystem</groupId>
+            <artifactId>servicecommunication</artifactId>
+            <!--<version>${project.version}</version>-->
+            <version>10.0.1</version>
+        </dependency>
         <!--Diğer dependency'leri parenttan çeker.-->
     </dependencies>
 
