@@ -11,39 +11,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <version>1.0-SNAPSHOT</version>
-    <artifactId>ticketservice</artifactId>
-    <description>Ticket Service</description>
+    <artifactId>notificationservice</artifactId>
+    <description>Notification Service</description>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.17</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-elasticsearch</artifactId>
-        </dependency>
-
-        <!--feign kullanarak account service ile iletişim kurabilmesi için ve ek ortak özellikler-->
-        <dependency>
-            <groupId>com.ticketsystem</groupId>
-            <artifactId>servicecommunication</artifactId>
-            <!--<version>${project.version}</version>-->
-            <version>10.0.1</version>
-        </dependency>
-
         <!--RabbitMQ'a client olabilmesi için Spring Cloud'un sunduğu spring-cloud-stream kullanıcaz.-->
         <!--Queue implementasyonlarını bununla yapıcaz.-->
         <dependency>
@@ -58,7 +29,17 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-amqp</artifactId>
         </dependency>
-        <!--Diğer dependency'leri parenttan çeker.-->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--feign kullanarak account service ile iletişim kurabilmesi için ve ek ortak özellikler-->
+        <dependency>
+            <groupId>com.ticketsystem</groupId>
+            <artifactId>servicecommunication</artifactId>
+            <!--<version>${project.version}</version>-->
+            <version>10.0.1</version>
+        </dependency>
     </dependencies>
 
     <build>

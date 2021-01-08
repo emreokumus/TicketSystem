@@ -30,6 +30,7 @@
         <module>eurekaserver</module>
         <module>ticketservice</module>
         <module>servicecommunication</module>
+        <module>notificationservice</module>
     </modules>
     <!--Ortak dependecyleri buraya koyduk.-->
     <dependencies>

@@ -23,3 +23,12 @@ services:
     environment:
       - discovery.type=single-node
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+  rabbitmq:
+    image: rabbitmq:3-management #rabbitmq image'ini kullanıcaz ama management arayüzü uygulamasıyla beraber.
+    ports:
+      - '5672:5672' #rabbitmq'nın benım bılgısayarıma açılan portu
+      - '15672:15672' #rabbitmq'nın management arayüzünün bilgisayarıma açılan portu
+    environment:
+      - RABBITMQ_DEFAULT_USER=eokumus
+      - RABBITMQ_DEFAULT_PASS=eokumus

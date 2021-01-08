@@ -2,6 +2,7 @@ package com.ticketsystem.ticketservice.service;
 
 import com.ticketsystem.servicecommunication.client.AccountServiceClient;
 import com.ticketsystem.servicecommunication.client.contract.AccountDto;
+import com.ticketsystem.servicecommunication.messaging.TicketNotification;
 import com.ticketsystem.ticketservice.dto.TicketDto;
 import com.ticketsystem.ticketservice.entity.PriorityType;
 import com.ticketsystem.ticketservice.entity.Ticket;
@@ -9,19 +10,20 @@ import com.ticketsystem.ticketservice.entity.TicketStatus;
 import com.ticketsystem.ticketservice.entity.elasticsearch.TicketModel;
 import com.ticketsystem.ticketservice.repository.TicketRepository;
 import com.ticketsystem.ticketservice.repository.elasticsearch.TicketElasticRepository;
-import lombok.RequiredArgsConstructor;
-import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.stream.annotation.EnableBinding;
+import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
+import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
 //@RequiredArgsConstructor //aşağıdaki Autowired alanları yazmak yerinde dırek bunu yazabılırdık.
 //Gerekli olan dependency'ler ile constructor injection yaratılmasını sağlıyor.
-public class TicketServiceImpl implements TicketService {
+public class TicketServiceImpl implements TicketService{
     /*
     //RequiredArgsConstructor kullansaydık @Autowired olanlar yerine bunları kullanacaktık.
     private final TicketRepository ticketRepository;
@@ -31,13 +33,15 @@ public class TicketServiceImpl implements TicketService {
     private TicketRepository ticketRepository;
     @Autowired
     private TicketElasticRepository elasticRepository;
-    @Autowired
-    private ModelMapper modelMapper;
 
     //Feign client'ı inject ederiz ve o interface'den otomatik instance'i yaratılacak.
     //private final AccountServiceClient accountServiceClient;
     @Autowired
-    private  AccountServiceClient accountServiceClient;
+    private AccountServiceClient accountServiceClient;
+
+    //Kuyruğa TicketNotification tipinde mesaj yollayan service.
+    @Autowired
+    private TicketNotificationService ticketNotificationService;
 
     @Transactional
     @Override
@@ -77,6 +81,9 @@ public class TicketServiceImpl implements TicketService {
             elasticRepository.save(model);
             //Response olarak oluşan nesneyi döndür.
             ticketDto.setId(ticket.getId());
+            //Kuyruğa notigication mesajını gönder.
+            ticketNotificationService.sendToQueue(ticket);
+
             return ticketDto;
         }catch (IllegalArgumentException exception){
             throw new IllegalArgumentException("Assiggne bulunamadığı için kayıt yapılamadı.");
@@ -100,4 +107,6 @@ public class TicketServiceImpl implements TicketService {
     public Page<TicketDto> getPagination(Pageable pageable) {
         return null;
     }
+
+
 }

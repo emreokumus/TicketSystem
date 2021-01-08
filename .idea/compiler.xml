@@ -12,6 +12,7 @@
         <module name="ticketservice" />
         <module name="configserver" />
         <module name="accountservice" />
+        <module name="notificationservice" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
       <module name="accountservice" options="-parameters" />
       <module name="configserver" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
+      <module name="notificationservice" options="-parameters" />
       <module name="servicecommunication" options="-parameters" />
       <module name="ticketservice" options="-parameters" />
     </option>

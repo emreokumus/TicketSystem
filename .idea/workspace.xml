@@ -5,26 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/servicecommunication/servicecommunication.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notificationservice/notificationservice.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/dto/AccountDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/service/AccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/service/AccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/configserver.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/eurekaserver.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicecommunication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicecommunication/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ticketservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/config/CustomBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/config/CustomBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/controller/TicketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/controller/TicketController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/service/TicketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/service/TicketServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketservice/ticketservice.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,13 +110,15 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TicketServiceApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -155,6 +146,13 @@
         </pattern>
       </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketsystem.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="notificationservice" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketsystem.notificationservice.NotificationServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,7 +222,8 @@
       <workItem from="1608991077543" duration="58000" />
       <workItem from="1608991225089" duration="49067000" />
       <workItem from="1609934421321" duration="2428000" />
-      <workItem from="1609958014201" duration="13866000" />
+      <workItem from="1609958014201" duration="14482000" />
+      <workItem from="1610021350526" duration="11344000" />
     </task>
     <servers />
   </component>

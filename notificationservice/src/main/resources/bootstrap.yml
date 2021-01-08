@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: notification-service #config serverda bu isimle .yml'i arar
+  cloud:
+    config:
+      #profile: native
+      uri: ${CONFIG_SERVER_URL:http://localhost:8888}
