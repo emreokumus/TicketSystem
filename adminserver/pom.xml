@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>ticketsystem</artifactId>
+        <groupId>com.ticketsystem</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>adminserver</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <description>Admin Server</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-server</artifactId>
+            <version>2.2.1</version>
+        </dependency>
+        <!--Euraka'dan servislerimizin instance'larımızın bilgilerini almamız gerektiği için Eureka Client ekleriz -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+        <!--Diğer dependency'leri parenttan alır.
+        UI gibi kısımları olduğu için kendiside bir web uygulaması
+        bu yüzden starter-web filan parenttan gelecek-->
+    </dependencies>
+</project>

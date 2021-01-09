@@ -5,19 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/apigateway/apigateway.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/hystrixdashboard/hystrixdashboard.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/zipkinserver/zipkinserver.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adminserver/adminserver.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/NotificationServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/service/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/service/NotificationServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/controller/AccountController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +81,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectId" id="1m9zUxOSTiM6umjDvaz5wFt2xJX" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -113,14 +117,16 @@
       <recent name="com.ticketsystem.ticketservice.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.ZipkinServerApplication">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.NotificationServiceApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -128,6 +134,26 @@
     <configuration name="AccountServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="accountservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketsystem.accountservice.AccountServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdminServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="adminserver" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ticketsystem.adminserver.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketsystem.adminserver.AdminServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="apigateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketservice.apigateway.ApiGatewayApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -183,6 +209,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.EurekaServerApplication" />
+        <item itemvalue="Spring Boot.AdminServerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -240,7 +267,8 @@
       <workItem from="1609934421321" duration="2428000" />
       <workItem from="1609958014201" duration="14482000" />
       <workItem from="1610021350526" duration="11883000" />
-      <workItem from="1610095605412" duration="15589000" />
+      <workItem from="1610095605412" duration="15605000" />
+      <workItem from="1610184421160" duration="9966000" />
     </task>
     <servers />
   </component>

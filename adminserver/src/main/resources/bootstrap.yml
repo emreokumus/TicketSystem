@@ -1,0 +1,31 @@
+server:
+  port: ${SERVER_PORT:8085}
+
+spring:
+  application:
+    name: admin-server
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 10 #instance'larımızı kontrol etmesi için interval ekleriz.
+    health-check-url-path: /actuator/health
+    #instance'in health check'i herhangi bir değişiklik yapmazsak bu adreste oluyor.
+    # actuator/health uygulamanın ayakta olup olmadığı konusunda bilgi veren endpoint.
+    metadata-map:
+      startup: ${random.int}
+  client:
+    registryFetchIntervalSeconds: 5  # 5 saniyede bir registry'den fetch etsin instance'ları
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVICE_URL:http://localhost:8761}/eureka/
+      # Uygulamayı dockerization ettiğimiz zaman docker image'ina enviroment variable vererek bunda değişiklik yapabiliriz veya default bu kalır.
+      # docker-compose.yml dosyasmızda daha önce rabbitmq'nın docker image'na environment variablelarını vermiştik
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*" # butun endpointleri dışarı açar (actuator dahil hepsi)
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+# Diğer detay konfigürasyonlara dökümanından bakılabilir. https://codecentric.github.io/spring-boot-admin/current/

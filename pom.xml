@@ -34,6 +34,7 @@
         <module>zipkinserver</module>
         <module>hystrixdashboard</module>
         <module>apigateway</module>
+        <module>adminserver</module>
     </modules>
     <!--Ortak dependecyleri buraya koyduk.-->
     <dependencies>

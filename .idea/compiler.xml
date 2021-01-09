@@ -10,6 +10,7 @@
         <module name="eurekaserver" />
         <module name="apigateway" />
         <module name="ticketservice" />
+        <module name="adminserver" />
         <module name="servicecommunication" />
         <module name="configserver" />
         <module name="accountservice" />
@@ -22,6 +23,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="accountservice" options="-parameters" />
+      <module name="adminserver" options="-parameters" />
       <module name="apigateway" options="-parameters" />
       <module name="configserver" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
