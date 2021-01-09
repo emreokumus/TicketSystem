@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/adminserver/adminserver.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/target/classes/com/ticketsystem/accountservice/service/AccountServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -268,7 +260,7 @@
       <workItem from="1609958014201" duration="14482000" />
       <workItem from="1610021350526" duration="11883000" />
       <workItem from="1610095605412" duration="15605000" />
-      <workItem from="1610184421160" duration="9966000" />
+      <workItem from="1610184421160" duration="10067000" />
     </task>
     <servers />
   </component>
