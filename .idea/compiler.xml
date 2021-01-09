@@ -8,22 +8,28 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
-        <module name="servicecommunication" />
+        <module name="apigateway" />
         <module name="ticketservice" />
+        <module name="servicecommunication" />
         <module name="configserver" />
         <module name="accountservice" />
+        <module name="hystrixdashboard" />
         <module name="notificationservice" />
+        <module name="zipkinserver" />
       </profile>
     </annotationProcessing>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="accountservice" options="-parameters" />
+      <module name="apigateway" options="-parameters" />
       <module name="configserver" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
+      <module name="hystrixdashboard" options="-parameters" />
       <module name="notificationservice" options="-parameters" />
       <module name="servicecommunication" options="-parameters" />
       <module name="ticketservice" options="-parameters" />
+      <module name="zipkinserver" options="-parameters" />
     </option>
   </component>
 </project>

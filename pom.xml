@@ -31,6 +31,9 @@
         <module>ticketservice</module>
         <module>servicecommunication</module>
         <module>notificationservice</module>
+        <module>zipkinserver</module>
+        <module>hystrixdashboard</module>
+        <module>apigateway</module>
     </modules>
     <!--Ortak dependecyleri buraya koyduk.-->
     <dependencies>

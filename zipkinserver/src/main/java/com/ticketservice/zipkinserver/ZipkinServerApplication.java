@@ -1,13 +1,15 @@
-package com.ticketsystem.notificationservice;
+package com.ticketservice.zipkinserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import zipkin.server.EnableZipkinServer;
 
-@SpringBootApplication(scanBasePackages = {"com.ticketsystem"})
+@SpringBootApplication
 @EnableEurekaClient
-public class NotificationServiceApplication {
+@EnableZipkinServer
+public class ZipkinServerApplication {
     public static void main(String[] args) {
-        SpringApplication.run(NotificationServiceApplication.class,args);
+        SpringApplication.run(ZipkinServerApplication.class,args);
     }
 }

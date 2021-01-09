@@ -4,13 +4,16 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/accountservice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/accountservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/apigateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/configserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/configserver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eurekaserver" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eurekaserver/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/hystrixdashboard/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/notificationservice/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/servicecommunication/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ticketservice" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ticketservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zipkinserver/src/main/java" charset="UTF-8" />
   </component>
 </project>

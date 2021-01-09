@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/notificationservice/notificationservice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apigateway/apigateway.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hystrixdashboard/hystrixdashboard.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zipkinserver/zipkinserver.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/NotificationServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/NotificationServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/service/NotificationServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/src/main/java/com/ticketsystem/notificationservice/service/NotificationServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/servicecommunication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicecommunication/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ticketservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/service/TicketServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/service/TicketServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,16 +113,14 @@
       <recent name="com.ticketsystem.ticketservice.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.TicketServiceApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+  <component name="RunManager" selected="Spring Boot.ZipkinServerApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -150,6 +152,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HystrixDashboardApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="hystrixdashboard" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketservice.hystrixdashboard.HystrixDashboardApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NotificationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="notificationservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketsystem.notificationservice.NotificationServiceApplication" />
@@ -160,6 +169,13 @@
     <configuration name="TicketServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="ticketservice" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketsystem.ticketservice.TicketServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZipkinServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="zipkinserver" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ticketservice.zipkinserver.ZipkinServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -223,7 +239,8 @@
       <workItem from="1608991225089" duration="49067000" />
       <workItem from="1609934421321" duration="2428000" />
       <workItem from="1609958014201" duration="14482000" />
-      <workItem from="1610021350526" duration="11344000" />
+      <workItem from="1610021350526" duration="11883000" />
+      <workItem from="1610095605412" duration="15589000" />
     </task>
     <servers />
   </component>
@@ -269,6 +286,11 @@
           <url>file://$PROJECT_DIR$/accountservice/src/main/java/com/ticketsystem/accountservice/config/CassandraConfiguration.java</url>
           <line>37</line>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/ticketservice/src/main/java/com/ticketsystem/ticketservice/TicketServiceApplication.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
