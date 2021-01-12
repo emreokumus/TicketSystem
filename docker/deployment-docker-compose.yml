@@ -1,0 +1,161 @@
+version: '3.1'
+
+networks:
+  ticketsystem:
+
+services:
+  # DB and Queue
+  cassandra:
+    image: cassandra
+    container_name: cassandra-server
+    networks:
+      - ticketsystem
+    ports:
+      - '9042:9042'
+
+  mysql:
+    image: mysql
+    container_name: mysql-server
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      MYSQL_ROOT_PASSWORD: ticketsystem
+    ports:
+      - '3307:3306'
+
+  elasticsearch:
+    image: elasticsearch:7.10.1
+    container_name: elasticsearch
+    networks:
+      - ticketsystem
+    ports:
+      - '9200:9200'
+      - '9300:9300'
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    networks:
+      - ticketsystem
+    ports:
+      - '5672:5672'
+      - '15672:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=eokumus
+      - RABBITMQ_DEFAULT_PASS=eokumus
+
+  # Local Services
+
+  account-service:
+    image: account-service:1.0-SNAPSHOT
+    container_name: account-service
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      CONFIG_SERVER_URL: http://config-server:8888
+      CASSANDRA_SERVER_HOST: cassandra-server
+      SERVER_PORT: 8081
+    ports:
+      - '8081:8081'
+
+  ticket-service:
+    image: ticket-service:1.0-SNAPSHOT
+    container_name: ticket-service
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      CONFIG_SERVER_URL: http://config-server:8888
+      SERVER_PORT: 8082
+    ports:
+      - '8082:8082'
+
+  notification-service:
+    image: notification-service:1.0-SNAPSHOT
+    container_name: notification-service
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      CONFIG_SERVER_URL: http://config-server:8888
+      SERVER_PORT: 8083
+    ports:
+      - '8083:8083'
+
+  # System Services
+  config-server:
+    image: config-server:1.0-SNAPSHOT
+    container_name: config-server
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      CONFIG_SERVER_URL: http://config-server:8888
+      SERVER_PORT: 8888
+    ports:
+      - '8888:8888'
+
+  eureka-server:
+    image: eureka-server:1.0-SNAPSHOT
+    container_name: eureka-server
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      CONFIG_SERVER_URL: http://config-server:8888
+      SERVER_PORT: 8761
+    ports:
+      - '8761:8761'
+
+  admin-server:
+    image: admin-server:1.0-SNAPSHOT
+    container_name: admin-server
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      EUREKA_SERVICE_URL: http://eureka-server:8888
+      SERVER_PORT: 8085
+    ports:
+      - '8085:8085'
+
+  gateway-server:
+    image: gateway-server:1.0-SNAPSHOT
+    container_name: gateway-server
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      EUREKA_SERVICE_URL: http://eureka-server:8888
+      SERVER_PORT: 8084
+    ports:
+      - '8084:8084'
+
+  hystrix-dashboard:
+    image: hystrix-dashboard:1.0-SNAPSHOT
+    container_name: hystrix-dashboard
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      EUREKA_SERVICE_URL: http://eureka-server:8888
+      SERVER_PORT: 8080
+    ports:
+      - '8080:8080'
+
+  zipkin-server:
+    image: zipkin-server:1.0-SNAPSHOT
+    container_name: zipkin-server
+    restart: always
+    networks:
+      - ticketsystem
+    environment:
+      EUREKA_SERVICE_URL: http://eureka-server:8888
+      SERVER_PORT: 9411
+    ports:
+      - '9411:9411'

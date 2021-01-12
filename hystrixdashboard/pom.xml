@@ -26,6 +26,43 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.26.0</version>
+                <extensions>true</extensions> <!--buraya kadar olan kısım plugin'in özellikleri-->
+                <configuration> <!--Buradan sonrası bizim oluşturacağımız docker image'in konfigürasyonunu ilgilediren kısımlar-->
+                    <verbose>true</verbose>
+                    <images>
+                        <image>
+                            <name>${project.artifactId}:${project.version}</name> <!--image adı accountservice:1.0-SNAPSHOT-->
+                            <build>
+                                <from>java:8-jdk-alphine</from> <!--Hangi base image'i kullanarak oluşturucağım.-->
+                                <entryPoint>
+                                    <exec> <!--makinanın içerisinde commnd prompt'da bir takım komutlar execute ettiğimiz kısım.-->
+                                        <args>java</args>
+                                        <args>-jar</args>
+                                        <args>/maven/${project.artifactId}-${project.version}.jar</args>
+                                    </exec>
+                                </entryPoint>
+                                <!--Environment variable'ları docker-compose file içerisinden vereceğiz.-->
+                                <assembly>
+                                    <descriptorRef>artifact</descriptorRef>
+                                </assembly>
+                            </build>
+                        </image>
+                    </images>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>build</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>build</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
         </plugins>
     </build>
 </project>

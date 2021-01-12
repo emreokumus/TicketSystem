@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ecb36618-92da-4453-b070-aa7d42fa7554" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/accountservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/accountservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/adminserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apigateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/apigateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configserver/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/configserver/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurekaserver/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/eurekaserver/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hystrixdashboard/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/hystrixdashboard/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notificationservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/notificationservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/servicecommunication/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/servicecommunication/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ticketservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ticketservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipkinserver/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/zipkinserver/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zipkinserver/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/zipkinserver/src/main/resources/bootstrap.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,15 +123,13 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.NotificationServiceApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -260,7 +271,8 @@
       <workItem from="1609958014201" duration="14482000" />
       <workItem from="1610021350526" duration="11883000" />
       <workItem from="1610095605412" duration="15605000" />
-      <workItem from="1610184421160" duration="10067000" />
+      <workItem from="1610184421160" duration="11757000" />
+      <workItem from="1610440217817" duration="8973000" />
     </task>
     <servers />
   </component>

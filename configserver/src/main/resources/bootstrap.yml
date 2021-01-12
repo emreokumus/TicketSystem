@@ -1,5 +1,5 @@
 server:
-  port: 8888
+  port: ${SERVER_PORT:8888}
 
 #Eureka Server üzerinde ServiceRegistery'e register olacağı isim.
 spring:
@@ -11,7 +11,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/emreokumus/TicketSystemConfigRepo.git
+          uri: ${CONFIG_GIT_URL:https://github.com/emreokumus/TicketSystemConfigRepo.git}
           username: ${CONFIG_GIT_USERNAME}
           password: ${CONFIG_GIT_PASSWORD}
           clone-on-start: true
